@@ -52,23 +52,38 @@ Fraction Fraction::division(Fraction division)
 
 };
 
+int Fraction::GreatCOM(int numR, int numD)
+{
+	// Recursive form of getting the gcd of numerator and denominator
+	if (numD == 0)
+	{
+		return numR;
+	}
+	else
+	{
+		return GreatCOM(numD, numR % numD);
+	}
+}
+
 void Fraction::print() //displaying results
 {
+ int gcd = GreatCOM(numR,numD);
+
 	int num1, num2;
 	if (numR > numD) // Checking if it's a mixed fraction
 	{
-		num1 = numR / numD;
+		num1 = (numR /gcd) /(numD/gcd);
 		num2 = numR % numD;
-		cout << "answer is " << num1 << " " << num2 << "/" << numD << endl;
+		cout << "answer is " << num1 << " " << num2 << "/" << (numD/gcd) << endl;
 	}
 	else if (numR == numD) // checking for equal deno and num to print result as integer
 	{
-		num1 = numR / numD;
+		num1 = (numR /gcd)/ (numD/gcd);
 		cout << "answer is " << num1 << endl;
 	}
 	else
 	{
-		cout << "answer is " << numR << "/" << numD;
+		cout << "answer is " << numR/gcd << "/" << numD/gcd;
 	}
 };
 

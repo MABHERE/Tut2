@@ -1,10 +1,10 @@
 #pragma once
-#pragma once
 class Fraction
 {
 
 private:
 	int numR, numD;
+	int  GreatCOM(int, int);
 public:
 	Fraction(int N = 0, int D = 1); // constructor
 	~Fraction(); // deconstuctor
@@ -23,6 +23,7 @@ public:
 	Fraction subtract(Fraction subtract);
 	Fraction multiply(Fraction multiply);
 	Fraction division(Fraction division);
+	
 
 	Fraction operator+(Fraction add);
 	Fraction operator-(Fraction subtract);
