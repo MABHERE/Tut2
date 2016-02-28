@@ -1,7 +1,6 @@
 #pragma once
 class Fraction
 {
-
 private:
 	int numR, numD;
 	int  GreatCOM(int, int);

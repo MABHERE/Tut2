@@ -18,7 +18,7 @@ int main()
 
 	Fraction num1(n1, d1);
 	Fraction num2(n2, d2);
-	Fraction ans = num1 + num2;
+	Fraction ans = num1 / num2;
 	ans.print();
 	system("pause");
 	return 0;
