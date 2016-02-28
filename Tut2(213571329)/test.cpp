@@ -18,8 +18,15 @@ int main()
 
 	Fraction num1(n1, d1);
 	Fraction num2(n2, d2);
-	Fraction ans = num1 / num2;
+	Fraction ans;
+	ans= num1 + num2;   //testing addition
 	ans.print();
+	ans = num1 - num2;  //testinng subtraction
+	ans.print();
+	ans = num1*num2;
+	ans.print();		//testing multiplication
+	ans = num1 / num2;
+	ans.print();		//testing division
 	system("pause");
 	return 0;
 }

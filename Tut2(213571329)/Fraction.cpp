@@ -80,9 +80,13 @@ void Fraction::print() //displaying results
 	{
 		cout << "answer is " << num1 << endl;
 	}
+	else if (numR ==0)
+	{
+		cout << "answer is 0" << endl;
+	}
 	else
 	{
-		cout << "answer is " << numR / gcd << "/" << numD / gcd;
+		cout << "answer is " << numR / gcd << "/" << numD / gcd << endl;
 	}
 };
 
@@ -107,6 +111,7 @@ Fraction Fraction::operator/(Fraction division)
 	return Fraction(numR*division.numD, numD*division.numR);
 
 };
+
 
 
 
