@@ -1,4 +1,6 @@
-#pragma once
+#include <iostream>
+using namespace std;
+
 class Fraction
 {
 private:
@@ -9,14 +11,19 @@ public:
 	~Fraction(); // deconstuctor
 
 	// getting the numerator & denominator
-	int Gnumerator();
-	int Gdenominator();
+	int Getnumerator();
+	int Getdenominator();
 
 	// setting the numerator & denominator
-	void Snumerator(int num);
-	void Sdenominator(int num);
+	void Setnumerator(int num);
+	void Setdenominator(int num);
+
+	//Print function
+	void print();
 
 
+	friend istream & operator >> (istream &input, Fraction &frac); //Overloading the isertion stream
+	friend ostream & operator << (ostream &output, Fraction &frac); //Overloading the extration stream
 
 	Fraction add(Fraction add);
 	Fraction subtract(Fraction subtract);
@@ -28,7 +35,7 @@ public:
 	Fraction operator-(Fraction subtract);
 	Fraction operator*(Fraction multiply);
 	Fraction operator/(Fraction division);
-	void print();
+
 };
 
 
